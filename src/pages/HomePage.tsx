@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
+import ContactModal from '../components/forms/ContactForm';
 
 export default function HomePage() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -16,6 +17,8 @@ export default function HomePage() {
       </main>
 
       <Footer onContactOpen={openContact} />
+
+      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
 }
