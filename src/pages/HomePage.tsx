@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
-import ContactModal from '../components/forms/ContactForm';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import ContactModal from '@/components/forms/ContactForm';
+import HeroSection from '@/components/sections/HeroSection';
 
 export default function HomePage() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -13,7 +14,8 @@ export default function HomePage() {
       <Navbar onContactOpen={openContact} />
 
       <main className="flex-1">
-        {/* sections go here */}
+        <HeroSection />
+        {/* more sections go here */}
       </main>
 
       <Footer onContactOpen={openContact} />
