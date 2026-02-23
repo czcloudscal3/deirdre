@@ -6,6 +6,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import FashionSection from '@/components/sections/FashionSection';
 import ActingSection from '@/components/sections/ActingSection';
 import FilmmakingSection from '@/components/sections/FilmmakingSection';
+import PodcastSection from '@/components/sections/PodcastSection';
 
 export default function HomePage() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function HomePage() {
         <FashionSection />
         <ActingSection />
         <FilmmakingSection />
+        <PodcastSection />
         {/* more sections go here */}
       </main>
 
