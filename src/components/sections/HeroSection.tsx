@@ -5,9 +5,10 @@ import { useHeroRotation } from '@/hooks/useHeroRotation';
 import heroImage from '@/assets/images/94e51b5e08ec4f34ef5848dc1c2b178de4eafb39.png';
 import heroImage2 from '@/assets/images/ff086d765c04a1b70b4c18859b0c0cf504c86b05.png';
 import heroImage3 from '@/assets/images/40afe14880d978598a0af0ee0b6ba4ed55549b58.png';
+import heroImage4 from '@/assets/images/Facetune_23-02-2026-17-58-19.jpg';
 import eliteLogo from '@/assets/images/e038bc16e8714bdbaeb6396806f44d1ab5534c62.png';
 
-const heroImages = [heroImage, heroImage2, heroImage3];
+const heroImages = [heroImage, heroImage2, heroImage3, heroImage4];
 
 export default function HeroSection() {
   const currentIndex = useHeroRotation(heroImages.length);
@@ -15,22 +16,32 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background image with crossfade */}
-      <div className="absolute inset-0 z-0">
+      <div
+        className={`absolute inset-0 z-0 ${currentIndex >= 2 ? 'bg-black' : ''}`}
+      >
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
-          className="absolute inset-0"
+          className={
+            currentIndex >= 2
+              ? 'absolute inset-0 flex items-start justify-center'
+              : 'absolute inset-0'
+          }
         >
           <img
             src={heroImages[currentIndex]}
             alt="Deirdre Lorenz"
-            className="w-full h-full object-cover"
+            className={
+              currentIndex >= 2
+                ? 'h-full w-auto object-contain object-top'
+                : 'w-full h-full object-cover'
+            }
           />
         </motion.div>
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
       </div>
 
       {/* Title */}
