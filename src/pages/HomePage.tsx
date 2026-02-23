@@ -3,6 +3,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ContactModal from '@/components/forms/ContactForm';
 import HeroSection from '@/components/sections/HeroSection';
+import FashionSection from '@/components/sections/FashionSection';
 
 export default function HomePage() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -15,6 +16,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         <HeroSection />
+        <FashionSection />
         {/* more sections go here */}
       </main>
 
