@@ -57,7 +57,7 @@ export default function FashionSection() {
           className="mt-12 text-center"
         >
           <p className="text-sm text-gray-600 tracking-wider">
-            Clients include: Karl Lagerfeld • DKNY • Ralph Lauren • Isaac Mizrahi • Shoshanna
+            Clients have included: Karl Lagerfeld • DKNY • Ralph Lauren • Isaac Mizrahi • Shoshanna
             • Calvin Klein • Abercrombie & Fitch • Champion • Levis, and many more.
           </p>
         </motion.div>
