@@ -2,11 +2,11 @@ import { motion } from 'motion/react';
 import { Instagram } from 'lucide-react';
 import { useHeroRotation } from '@/hooks/useHeroRotation';
 
-import heroImage from '@/assets/images/94e51b5e08ec4f34ef5848dc1c2b178de4eafb39.png';
-import heroImage2 from '@/assets/images/ff086d765c04a1b70b4c18859b0c0cf504c86b05.png';
-import heroImage3 from '@/assets/images/40afe14880d978598a0af0ee0b6ba4ed55549b58.png';
-import heroImage4 from '@/assets/images/Facetune_23-02-2026-17-58-19.jpg';
-import eliteLogo from '@/assets/images/e038bc16e8714bdbaeb6396806f44d1ab5534c62.png';
+import heroImage from '@/assets/hero/slide_1.png';
+import heroImage2 from '@/assets/hero/slide_2.png';
+import heroImage3 from '@/assets/hero/slide_3.png';
+import heroImage4 from '@/assets/hero/slide_4.png';
+import eliteLogo from '@/assets/images/elite_logo.png';
 
 const heroImages = [heroImage, heroImage2, heroImage3, heroImage4];
 
@@ -35,9 +35,11 @@ export default function HeroSection() {
             src={heroImages[currentIndex]}
             alt="Deirdre Lorenz"
             className={
-              currentIndex >= 2
-                ? 'h-full w-auto object-contain object-top'
-                : 'w-full h-full object-cover'
+              currentIndex === 1
+                ? 'w-full h-full object-cover object-[50%_40%]'
+                : currentIndex >= 2
+                  ? 'h-full w-auto object-contain object-top'
+                  : 'w-full h-full object-cover'
             }
           />
         </motion.div>
