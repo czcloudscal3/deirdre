@@ -3,7 +3,7 @@ import { Clapperboard } from 'lucide-react';
 import Timeline from '@/components/ui/Timeline';
 import { filmProjects } from '@/data/filmProjects';
 
-import filmMakingPoster from '@/assets/images/5a8d8c0258102d5d81e53b6ffa0c2fbbf49d1aa8.png';
+import filmMakingPoster from '@/assets/images/filmmaking/5a8d8c0258102d5d81e53b6ffa0c2fbbf49d1aa8.png';
 
 const timelineItems = filmProjects.map((item) => ({
   year: item.year,

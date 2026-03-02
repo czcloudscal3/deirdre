@@ -3,7 +3,7 @@ import { Film } from 'lucide-react';
 import Timeline from '@/components/ui/Timeline';
 import { filmography } from '@/data/filmography';
 
-import actingPhoto from '@/assets/images/2ab429576897a3af04bc861485a20d9b9567c68b.png';
+import actingPhoto from '@/assets/images/acting/2ab429576897a3af04bc861485a20d9b9567c68b.png';
 
 const timelineItems = filmography.map((item) => ({
   year: item.year,

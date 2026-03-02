@@ -2,11 +2,11 @@ import { motion } from 'motion/react';
 import { Instagram } from 'lucide-react';
 import { useHeroRotation } from '@/hooks/useHeroRotation';
 
-import heroImage from '@/assets/hero/slide_1.png';
-import heroImage2 from '@/assets/hero/slide_2.png';
-import heroImage3 from '@/assets/hero/slide_3.png';
-import heroImage4 from '@/assets/hero/slide_4.png';
-import eliteLogo from '@/assets/images/elite_logo.png';
+import heroImage from '@/assets/images/hero/slide_1.png';
+import heroImage2 from '@/assets/images/hero/slide_2.png';
+import heroImage3 from '@/assets/images/hero/slide_3.png';
+import heroImage4 from '@/assets/images/hero/slide_4.png';
+import eliteLogo from '@/assets/images/hero/elite_logo.png';
 
 const heroImages = [heroImage, heroImage2, heroImage3, heroImage4];
 

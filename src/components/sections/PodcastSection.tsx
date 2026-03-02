@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Mic2 } from 'lucide-react';
 
-import podcastCover from '@/assets/images/e035e6b725a802b90396bcc956204fa11b13d31d.png';
+import podcastCover from '@/assets/images/podcast/e035e6b725a802b90396bcc956204fa11b13d31d.png';
 
 export default function PodcastSection() {
   return (
