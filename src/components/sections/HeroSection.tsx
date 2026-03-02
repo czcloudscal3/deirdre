@@ -77,8 +77,21 @@ export default function HeroSection() {
               whileHover={{ scale: 1.1 }}
               className="flex items-center gap-2 hover:text-gray-300 transition-colors"
             >
-              <Instagram size={24} />
+              <Instagram size={48} />
               <span className="text-sm tracking-wide">@deirdrelorenz</span>
+            </motion.a>
+
+            <motion.a
+              href="https://www.youtube.com/@UpgradedWithDeirdreLorenz"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              className="flex items-center gap-2 hover:text-gray-300 transition-colors"
+            >
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+              <span className="text-sm tracking-wide">YouTube</span>
             </motion.a>
 
             <motion.a
@@ -88,7 +101,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.1 }}
               className="flex items-center gap-2 hover:text-gray-300 transition-colors"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
               </svg>
               <span className="text-sm tracking-wide">@deirdrelorenz</span>
@@ -103,7 +116,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.1 }}
               className="flex items-center gap-2 hover:text-gray-300 transition-colors"
             >
-              <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="currentColor">
                 <rect width="48" height="48" rx="4" fill="#F5C518" />
                 <path d="M15.5 18h-2v12h2V18zm4 0h-2l2 12h2l-2-12zm6 0h-2v12h2V18zm8 0h-4v12h2v-8h2c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2zm0 4h-2v-2h2v2z" fill="#000000" />
               </svg>
@@ -120,7 +133,7 @@ export default function HeroSection() {
               <img
                 src={eliteLogo}
                 alt="Elite Models"
-                className="w-[30px] h-[30px] object-contain"
+                className="w-[60px] h-[60px] object-contain"
               />
             </motion.a>
           </div>
