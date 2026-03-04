@@ -66,9 +66,9 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-28 left-1/2 -translate-x-1/2 text-white z-10 w-full max-w-md px-4 sm:px-0 sm:-mt-10"
+        className="absolute bottom-28 left-1/2 -translate-x-1/2 text-white z-10 w-full max-w-md md:max-w-2xl px-4 sm:px-0 sm:-mt-10"
       >
-        <div className="flex flex-wrap justify-center items-center gap-5 sm:gap-6 md:gap-8">
+        <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-5 sm:gap-6 md:gap-8">
           <motion.a
             href="https://www.instagram.com/deirdrelorenz"
             target="_blank"
