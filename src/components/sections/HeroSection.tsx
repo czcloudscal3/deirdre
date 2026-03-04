@@ -27,7 +27,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className={
             currentIndex >= 2
-              ? 'absolute inset-0 flex items-start justify-center'
+              ? 'absolute inset-0 md:flex md:items-start md:justify-center'
               : 'absolute inset-0'
           }
         >
@@ -38,7 +38,7 @@ export default function HeroSection() {
               currentIndex === 1
                 ? 'w-full h-full object-cover object-[50%_40%]'
                 : currentIndex >= 2
-                  ? 'h-full w-auto object-contain object-top'
+                  ? 'w-full h-full object-cover object-top md:w-auto md:h-full md:object-contain'
                   : 'w-full h-full object-cover'
             }
           />
@@ -66,77 +66,78 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-20 left-1/2 -translate-x-1/2 text-white z-10"
+        className="absolute bottom-28 left-1/2 -translate-x-1/2 text-white z-10 w-full max-w-md px-4 sm:px-0 sm:-mt-10"
       >
-        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 md:gap-8">
-          <div className="flex items-center gap-4 sm:gap-6">
-            <motion.a
-              href="https://www.instagram.com/deirdrelorenz"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              className="flex items-center gap-2 hover:text-gray-300 transition-colors"
-            >
-              <Instagram size={48} />
-              <span className="text-sm tracking-wide">@deirdrelorenz</span>
-            </motion.a>
+        <div className="flex flex-wrap justify-center items-center gap-5 sm:gap-6 md:gap-8">
+          <motion.a
+            href="https://www.instagram.com/deirdrelorenz"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 hover:text-gray-300 transition-colors min-w-[44px] min-h-[44px]"
+          >
+            <Instagram className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
+            <span className="text-xs sm:text-sm tracking-wide hidden sm:inline">@deirdrelorenz</span>
+          </motion.a>
 
-            <motion.a
-              href="https://www.youtube.com/@UpgradedWithDeirdreLorenz"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              className="flex items-center gap-2 hover:text-gray-300 transition-colors"
-            >
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
-              <span className="text-sm tracking-wide">YouTube</span>
-            </motion.a>
+          <motion.a
+            href="https://www.youtube.com/@UpgradedWithDeirdreLorenz"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 hover:text-gray-300 transition-colors min-w-[44px] min-h-[44px]"
+          >
+            <svg className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+            <span className="text-xs sm:text-sm tracking-wide hidden sm:inline">YouTube</span>
+          </motion.a>
 
-            <motion.a
-              href="https://www.tiktok.com/@deirdrelorenz"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              className="flex items-center gap-2 hover:text-gray-300 transition-colors"
-            >
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-              </svg>
-              <span className="text-sm tracking-wide">@deirdrelorenz</span>
-            </motion.a>
-          </div>
+          <motion.a
+            href="https://www.tiktok.com/@deirdrelorenz"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 hover:text-gray-300 transition-colors min-w-[44px] min-h-[44px]"
+          >
+            <svg className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+            <span className="text-xs sm:text-sm tracking-wide hidden sm:inline">@deirdrelorenz</span>
+          </motion.a>
 
-          <div className="flex items-center gap-4 sm:gap-6">
-            <motion.a
-              href="https://www.imdb.com/name/nm1255825/"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              className="flex items-center gap-2 hover:text-gray-300 transition-colors"
-            >
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="currentColor">
-                <rect width="48" height="48" rx="4" fill="#F5C518" />
-                <path d="M15.5 18h-2v12h2V18zm4 0h-2l2 12h2l-2-12zm6 0h-2v12h2V18zm8 0h-4v12h2v-8h2c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2zm0 4h-2v-2h2v2z" fill="#000000" />
-              </svg>
-              <span className="text-sm tracking-wide">IMDb</span>
-            </motion.a>
+          <motion.a
+            href="https://www.imdb.com/name/nm1255825/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 hover:text-gray-300 transition-colors min-w-[44px] min-h-[44px]"
+          >
+            <svg className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" viewBox="0 0 48 48" fill="currentColor">
+              <rect width="48" height="48" rx="4" fill="#F5C518" />
+              <path d="M15.5 18h-2v12h2V18zm4 0h-2l2 12h2l-2-12zm6 0h-2v12h2V18zm8 0h-4v12h2v-8h2c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2zm0 4h-2v-2h2v2z" fill="#000000" />
+            </svg>
+            <span className="text-xs sm:text-sm tracking-wide hidden sm:inline">IMDb</span>
+          </motion.a>
 
-            <motion.a
-              href="https://www.elitemodels.com/new-york/atelier/8482-deirdre-lorenz"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              className="flex items-center gap-2 hover:text-gray-300 transition-colors"
-            >
-              <img
-                src={eliteLogo}
-                alt="Elite Models"
-                className="w-[60px] h-[60px] object-contain"
-              />
-            </motion.a>
-          </div>
+          <motion.a
+            href="https://www.elitemodels.com/new-york/atelier/8482-deirdre-lorenz"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 hover:text-gray-300 transition-colors min-w-[44px] min-h-[44px]"
+          >
+            <img
+              src={eliteLogo}
+              alt="Elite Models"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0"
+            />
+          </motion.a>
         </div>
       </motion.div>
 

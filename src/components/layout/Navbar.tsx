@@ -34,7 +34,7 @@ export default function Navbar({ onContactOpen }: NavbarProps) {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          {/* <div className="hidden md:flex space-x-8">
             {navLinks.map(({ label, section }) => (
               <button
                 key={section}
@@ -51,7 +51,7 @@ export default function Navbar({ onContactOpen }: NavbarProps) {
               <Mail size={16} />
               CONTACT
             </button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button
@@ -63,7 +63,7 @@ export default function Navbar({ onContactOpen }: NavbarProps) {
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
+        {/* {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function Navbar({ onContactOpen }: NavbarProps) {
               CONTACT
             </button>
           </motion.div>
-        )}
+        )} */}
       </div>
     </nav>
   );

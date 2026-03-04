@@ -20,14 +20,14 @@ export default function HomePage() {
 
       <main className="flex-1">
         <HeroSection />
-        <FashionSection />
-        <ActingSection />
-        <FilmmakingSection />
-        <PodcastSection />
-        <VolunteeringSection />
+        {/* <FashionSection /> */}
+        {/* <ActingSection /> */}
+        {/* <FilmmakingSection /> */}
+        {/* <PodcastSection /> */}
+        {/* <VolunteeringSection /> */}
       </main>
 
-      <Footer onContactOpen={openContact} />
+      {/* <Footer onContactOpen={openContact} /> */}
 
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
