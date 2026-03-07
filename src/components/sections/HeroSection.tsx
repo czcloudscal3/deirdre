@@ -6,9 +6,10 @@ import heroImage from '@/assets/images/hero/slide_1.png';
 import heroImage2 from '@/assets/images/hero/slide_2.png';
 import heroImage3 from '@/assets/images/hero/slide_3.png';
 import heroImage4 from '@/assets/images/hero/slide_4.png';
+import heroImage5 from '@/assets/images/hero/slide_5.png';
 import eliteLogo from '@/assets/images/hero/elite_logo.png';
 
-const heroImages = [heroImage, heroImage2, heroImage3, heroImage4];
+const heroImages = [heroImage2, heroImage, heroImage5, heroImage3, heroImage4];
 
 export default function HeroSection() {
   const currentIndex = useHeroRotation(heroImages.length);
@@ -17,7 +18,7 @@ export default function HeroSection() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background image with crossfade */}
       <div
-        className={`absolute inset-0 z-0 ${currentIndex >= 2 ? 'bg-black' : ''}`}
+        className={`absolute inset-0 z-0 ${currentIndex >= 3 ? 'bg-black' : ''}`}
       >
         <motion.div
           key={currentIndex}
@@ -26,7 +27,7 @@ export default function HeroSection() {
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
           className={
-            currentIndex >= 2
+            currentIndex >= 3
               ? 'absolute inset-0 md:flex md:items-start md:justify-center'
               : 'absolute inset-0'
           }
@@ -35,9 +36,9 @@ export default function HeroSection() {
             src={heroImages[currentIndex]}
             alt="Deirdre Lorenz"
             className={
-              currentIndex === 1
+              currentIndex === 0
                 ? 'w-full h-full object-cover object-[50%_40%]'
-                : currentIndex >= 2
+                : currentIndex >= 3
                   ? 'w-full h-full object-cover object-top md:w-auto md:h-full md:object-contain'
                   : 'w-full h-full object-cover'
             }
